@@ -42,13 +42,6 @@ public class LinkedList<E> extends AbstractList<E> {
      }
    
 
-    // pre : 0 <= index < size() (throws IndexOutOfBoundsException if not)
-    // post: replaces the value at the given index with the given value
-    public void set(int index, E value) {
-        checkIndex(index);
-        ListNode<E> current = nodeAt(index);
-        current.data = value;
-    }
 
      // post: list is empty
       public void clear() {
@@ -144,6 +137,17 @@ public class LinkedList<E> extends AbstractList<E> {
         }
     }
 }
+
+
+//********************************************************************************
+//     // pre : 0 <= index < size() (throws IndexOutOfBoundsException if not)
+//     // post: replaces the value at the given index with the given value
+//     public void set(int index, E value) {
+//         checkIndex(index);
+//         ListNode<E> current = nodeAt(index);
+//         current.data = value;
+//     }
+//*******************************************************************************	
 
 
 //*************************************************************************
