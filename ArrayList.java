@@ -7,8 +7,7 @@ import java.util.Iterator;
 public class ArrayList<E> extends AbstractList<E> {
     private E[] elementData; // list of values
     //private int size;        // No need for it since it's already present in abstract.
-    
-    
+  
     public static final int DEFAULT_CAPACITY = 100;
 
     // pre : capacity >= 0 (throws IllegalArgumentException if not)
@@ -27,7 +26,6 @@ public class ArrayList<E> extends AbstractList<E> {
         this(DEFAULT_CAPACITY);
     }
 
-
     // pre : 0 <= index <= size() (throws IndexOutOfBoundsException if not)
     // post: inserts the given value at the given index, shifting subsequent
     //       values right
@@ -36,20 +34,18 @@ public class ArrayList<E> extends AbstractList<E> {
             throw new IndexOutOfBoundsException("index: " + index);
         }
         ensureCapacity(size + 1);
-        
+      
         for (int i = size; i >= index + 1; i--) {
             elementData[i] = elementData[i - 1];
         }
         elementData[index] = value;
         size++;
     }
-    
-    
-    
 
     // pre : 0 <= index < size() (throws IndexOutOfBoundsException if not)
     // post: removes value at the given index, shifting subsequent values left
     public void remove(int index) {
+
           checkIndex(index);
           for (int i = index; i < size - 1; i++) {
               elementData[i] = elementData[i + 1];
@@ -67,12 +63,10 @@ public class ArrayList<E> extends AbstractList<E> {
            this.size = 0;
        }
 
-
     // post: returns an iterator for this list
     public Iterator<E> iterator() {
         return new ArrayListIterator();
     }
-    
 
     // post: ensures that the underlying array has the given capacity; if not,
     //       the size is doubled (or more if given capacity is even larger)
@@ -85,7 +79,6 @@ public class ArrayList<E> extends AbstractList<E> {
             elementData = Arrays.copyOf(elementData, newCapacity);
         }
     }
-
 
     private class ArrayListIterator implements Iterator<E> {
         private int position;           // current position within the list
@@ -125,8 +118,7 @@ public class ArrayList<E> extends AbstractList<E> {
             position--;
             removeOK = false;
         }
-        
-        
+      
         public void add(E value) {
                 
         }

@@ -1,3 +1,5 @@
+import org.w3c.dom.Node;
+
 //compiler directive to eliminate superfluous warnings.
 @SuppressWarnings("unchecked")
 
@@ -31,6 +33,7 @@ public class ListClient3 {
         processList2(list4);
         System.out.println();
         System.out.println();
+
      
     }
 
@@ -106,7 +109,6 @@ public class ListClient3 {
         System.out.println("\tlist.get(0): "+list.get(0));
         System.out.println("\tlist.get(2): "+list.get(2));
         System.out.println("\tlist.get(3): "+list.get(3));
-       
     }
     
     //*********************************************************
