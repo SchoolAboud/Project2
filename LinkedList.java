@@ -5,7 +5,7 @@ import java.util.*;
 public class LinkedList<E> extends AbstractList<E> {
     private ListNode<E> front;  // first value in the list
     private ListNode<E> back;   // last value in the list
-    private int size;           // current number of elements
+    //private int size;           // current number of elements
 
     // post: constructs an empty list
     public LinkedList() {
@@ -13,11 +13,6 @@ public class LinkedList<E> extends AbstractList<E> {
         back = new ListNode<E>(null);
         clear();
     }
-
-    // post: returns the current number of elements in the list
-     public int size() {
-         return size;
-     }
 
 
 
@@ -151,7 +146,12 @@ public class LinkedList<E> extends AbstractList<E> {
 }
 
 
-
+//*************************************************************************
+//     // post: returns the current number of elements in the list
+//      public int size() {
+//          return size;
+//      }
+//*************************************************************************
 
 
 //**********************************************************************************
