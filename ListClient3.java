@@ -1,3 +1,5 @@
+import org.w3c.dom.Node;
+
 //compiler directive to eliminate superfluous warnings.
 @SuppressWarnings("unchecked")
 
@@ -28,14 +30,6 @@ public class ListClient3 {
         processList2(list4);
         System.out.println();
         System.out.println();
-
-        AbstractList liamTest = new ArrayList<Integer>();
-        liamTest.add(3);
-        liamTest.add(3434);
-        System.out.println(liamTest + " " + liamTest.size);
-        liamTest.clear();
-        System.out.println(liamTest + " " + liamTest.size);
-
     }
 
     //*********************************************************

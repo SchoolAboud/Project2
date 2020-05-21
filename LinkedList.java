@@ -26,7 +26,6 @@ public class LinkedList<E> extends AbstractList<E> {
     //       values right
     public void add(int index, E value) {
         if (index < 0 || index > size) {
-            throw new IndexOutOfBoundsException("index: " + index);
         }
         ListNode<E> current = nodeAt(index - 1);
         ListNode<E> newNode = new ListNode<E>(value, current.next, current);

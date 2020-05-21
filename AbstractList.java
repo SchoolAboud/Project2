@@ -8,8 +8,7 @@ public abstract class AbstractList<E> implements List<E> {
    public void add(E value){ 
       add(size(), value);
       size++;
-   }  
- 
+   }
    
    //addAll method is common 
    public void addAll(List<E> other) {
