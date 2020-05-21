@@ -5,7 +5,7 @@ import java.util.*;
 public class LinkedList<E> extends AbstractList<E> {
     private ListNode<E> front;  // first value in the list
     private ListNode<E> back;   // last value in the list
-    private int size;           // current number of elements
+    //private int size;           // current number of elements
 
     // post: constructs an empty list
     public LinkedList() {
@@ -13,11 +13,6 @@ public class LinkedList<E> extends AbstractList<E> {
         back = new ListNode<E>(null);
         clear();
     }
-
-    // post: returns the current number of elements in the list
-     public int size() {
-         return size;
-     }
 
 
 
@@ -46,13 +41,6 @@ public class LinkedList<E> extends AbstractList<E> {
      }
    
 
-    // pre : 0 <= index < size() (throws IndexOutOfBoundsException if not)
-    // post: replaces the value at the given index with the given value
-    public void set(int index, E value) {
-        checkIndex(index);
-        ListNode<E> current = nodeAt(index);
-        current.data = value;
-    }
 
      // post: list is empty
       public void clear() {
@@ -150,7 +138,23 @@ public class LinkedList<E> extends AbstractList<E> {
 }
 
 
+//********************************************************************************
+//     // pre : 0 <= index < size() (throws IndexOutOfBoundsException if not)
+//     // post: replaces the value at the given index with the given value
+//     public void set(int index, E value) {
+//         checkIndex(index);
+//         ListNode<E> current = nodeAt(index);
+//         current.data = value;
+//     }
+//*******************************************************************************	
 
+
+//*************************************************************************
+//     // post: returns the current number of elements in the list
+//      public int size() {
+//          return size;
+//      }
+//*************************************************************************
 
 
 //**********************************************************************************
