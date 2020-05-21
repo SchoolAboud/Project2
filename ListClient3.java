@@ -28,7 +28,14 @@ public class ListClient3 {
         processList2(list4);
         System.out.println();
         System.out.println();
-        
+
+        AbstractList liamTest = new ArrayList<Integer>();
+        liamTest.add(3);
+        liamTest.add(3434);
+        System.out.println(liamTest + " " + liamTest.size);
+        liamTest.clear();
+        System.out.println(liamTest + " " + liamTest.size);
+
     }
 
     //*********************************************************
@@ -103,7 +110,6 @@ public class ListClient3 {
         System.out.println("\tlist.get(0): "+list.get(0));
         System.out.println("\tlist.get(2): "+list.get(2));
         System.out.println("\tlist.get(3): "+list.get(3));
-       
     }
     
     //*********************************************************

@@ -29,56 +29,6 @@ public class ArrayList<E> extends AbstractList<E> {
         return size;
     }
 
-    // pre : 0 <= index < size() (throws IndexOutOfBoundsException if not)
-    // post: returns the value at the given index in the list
-    public E get(int index) {
-        checkIndex(index);
-        return elementData[index];
-    }
-
-    // post: creates a comma-separated, bracketed version of the list
-    public String toString() {
-        if (size == 0) {
-            return "[]";
-        } else {
-            String result = "[" + elementData[0];
-            for (int i = 1; i < size; i++) {
-                result += ", " + elementData[i];
-            }
-            result += "]";
-            return result;
-        }
-    }
-
-    // post : returns the position of the first occurrence of the given
-    //        value (-1 if not found)
-    public int indexOf(E value) {
-        for (int i = 0; i < size; i++) {
-            if (elementData[i].equals(value)) {
-                return i;
-            }
-        }
-        return -1;
-    }
-
-    // post: returns true if list is empty, false otherwise
-    public boolean isEmpty() {
-        return size == 0;
-    }
-
-    // post: returns true if the given value is contained in the list,
-    //       false otherwise
-    public boolean contains(E value) {
-        return indexOf(value) >= 0;
-    }
-
-    // post: appends the given value to the end of the list
-    public void add(E value) {
-        ensureCapacity(size + 1);
-        elementData[size] = value;
-        size++;
-    }
-
     // pre : 0 <= index <= size() (throws IndexOutOfBoundsException if not)
     // post: inserts the given value at the given index, shifting subsequent
     //       values right
@@ -113,19 +63,12 @@ public class ArrayList<E> extends AbstractList<E> {
     }
 
     // post: list is empty
-    public void clear() {
+    /*public void clear() {
         for (int i = 0; i < size; i++) {
             elementData[i] = null;
         }
         size = 0;
-    }
-
-    // post: appends all values in the given list to the end of this list
-    public void addAll(List<E> other) {
-        for (E value: other) {
-            add(value);
-        }
-    }
+    }*/
 
     // post: returns an iterator for this list
     public Iterator<E> iterator() {
@@ -141,14 +84,6 @@ public class ArrayList<E> extends AbstractList<E> {
                 newCapacity = capacity;
             }
             elementData = Arrays.copyOf(elementData, newCapacity);
-        }
-    }
-
-    // post: throws an IndexOutOfBoundsException if the given index is
-    //       not a legal index of the current list
-    protected void checkIndex(int index) {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("index: " + index);
         }
     }
 

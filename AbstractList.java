@@ -7,6 +7,7 @@ public abstract class AbstractList<E> implements List<E> {
    //Add without index input is common
    public void add(E value){ 
       add(size(), value);
+      size++;
    }  
  
    
@@ -82,5 +83,8 @@ public abstract class AbstractList<E> implements List<E> {
         }
         return element;
     }
- 
+
+    public void clear() {
+        size = 0;
+    }
 }   
