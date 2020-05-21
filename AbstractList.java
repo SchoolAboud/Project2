@@ -7,7 +7,13 @@ public abstract class AbstractList<E> implements List<E> {
    //Add without index input is common
    public void add(E value){ 
       add(size(), value);
-   }  
+   }
+   
+   
+   //Size was made common by creating a protected field named size in the abstract class
+   public int size() {
+        return size;
+   }
  
    
    //addAll method is common 
