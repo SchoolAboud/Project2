@@ -3,32 +3,35 @@
 
 public class ListClient3 {
     public static void main(String[] args) {
+    
+        //Using the abstract class to call the classes
         AbstractList list1 = new ArrayList<Integer>();
         AbstractList list2 = new LinkedList<Integer>();
         System.out.println("***************************************  <INTEGER> TEST **************************************");
-        System.out.print("ArrayList: ");
+        System.out.println("ArrayList: ");
         processList(list1);
         System.out.println();
         
         System.out.println("*************************************");
-        System.out.print("LinkedList: ");
+        System.out.println("LinkedList: ");
         processList(list2);
         System.out.println();
         System.out.println();
+        System.out.println(list1.size());
         
         System.out.println("***************************************  <STRING> TEST **************************************");
         AbstractList list3 = new ArrayList<String>();
         AbstractList list4 = new LinkedList<String>();
-        System.out.print("ArrayList: ");
+        System.out.println("ArrayList: ");
         processList2(list3);
         System.out.println();
         
         System.out.println("*************************************");
-        System.out.print("LinkedList: ");
+        System.out.println("LinkedList: ");
         processList2(list4);
         System.out.println();
         System.out.println();
-        
+     
     }
 
     //*********************************************************
@@ -82,7 +85,7 @@ public class ListClient3 {
         System.out.println();
         
         //contains() test
-        System.out.println("The list.contains(Value) test");
+        System.out.println("The list.contains(Value) test: "+list);
         System.out.println("\tlist.contains(7): "+list.contains(7));
         System.out.println("\tlist.contains(40): "+list.contains(40));
         System.out.println("\tlist.contains(100): "+list.contains(100));
@@ -157,7 +160,7 @@ public class ListClient3 {
         System.out.println();
         
         //contains() test
-        System.out.println("The list.contains(Value) test");
+        System.out.println("The list.contains(Value) test: "+list);
         System.out.println("\tlist.contains(Physics): "+list.contains("Physics"));
         System.out.println("\tlist.contains(Maths): "+list.contains("Maths"));
         System.out.println("\tlist.contains(Aerospace): "+list.contains("Aerospace"));
