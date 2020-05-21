@@ -16,6 +16,13 @@ public abstract class AbstractList<E> implements List<E> {
             add(value);
         }
     }
+   
+   //Set was made common using remove(index), and add(index, value)
+   public void set(int index, E value) {
+       checkIndex(index);
+       remove(index);
+       add(index, value);
+     } 
 
    //Contains method is common
    public boolean contains(E value){
@@ -82,8 +89,8 @@ public abstract class AbstractList<E> implements List<E> {
         }
         return element;
     }
-
+  
     public void clear() {
         size = 0;
-    }
+    }   
 }   
